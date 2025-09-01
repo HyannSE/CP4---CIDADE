@@ -1,13 +1,11 @@
 .number-button {
-  padding: 15px;
-  font-size: 18px;
-  border-radius: 8px;
-  border: none;
-  background: #e0e0e0;
-  cursor: pointer;
-  transition: background 0.2s;
+  background: #333;
+  color: #ffcc00;
+  font-size: 20px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
 }
 
 .number-button:hover {
-  background: #d0d0d0;
+  background: #444;
 }

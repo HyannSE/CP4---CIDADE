@@ -1,37 +1,39 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .App {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  color: aliceblue;
-  background: #121212; /* fundo preto da tela */
-  padding-top: 200px;
+  background: #121212;
+  padding-top: 60px;
+  display: block;
 }
 
-.App h1{
-    color: aliceblue;
-    text-align: center;
+.App h1 {
+  color: #f1f1f1;
+  text-align: center;
+  margin-bottom: 20px;
 }
+
 .square-container {
   width: 400px;
-  height: 400px; /* quadrado */
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #1c1c1c;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  padding: 20px;
 }
 
 .calculator-container {
   width: 100%;
-  padding: 20px;
 }
 
 /* Grid de botões */
@@ -39,7 +41,7 @@
   display: grid;
   grid-template-columns: repeat(4, 70px);
   grid-auto-rows: 70px;
-  grid-gap: 10px;
+  gap: 12px;
   justify-content: center;
   align-items: center;
 }
@@ -51,49 +53,35 @@ button {
   border-radius: 12px;
   border: none;
   cursor: pointer;
-  transition: transform 0.1s, background 0.2s;
+  transition: all 0.2s ease-in-out;
   font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
 }
 
 button:hover {
   transform: translateY(-2px);
 }
 
+button:active {
+  transform: scale(0.95);
+  box-shadow: inset 0px 2px 6px rgba(0,0,0,0.6);
+}
+
 /* Botões especiais */
 .equals-button {
-  background: #ffc107; /* amarelo */
-  color: #1c1c1c;
+  background: #00c853;
+  color: #fff;
 }
 
 .equals-button:hover {
-  background: #ffb300;
+  background: #00e676;
 }
 
 .clear-button {
-  background: #f44336; /* vermelho */
+  background: #e53935;
   color: white;
 }
 
 .clear-button:hover {
-  background: #d32f2f;
-}
-
-/* Operation Buttons */
-.operation-button {
-  background: #ffeb3b; /* amarelo suave */
-  color: #1c1c1c;
-}
-
-.operation-button:hover {
-  background: #fdd835;
-}
-
-/* Number Buttons */
-.number-button {
-  background: #333;
-  color: #ffc107; /* amarelo */
-}
-
-.number-button:hover {
-  background: #444;
+  background: #f44336;
 }
