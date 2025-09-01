@@ -2,7 +2,7 @@ import { useState } from "react";
 import Display from "./components/Display";
 import NumberButton from "./components/NumberButton";
 import OperationButton from "./components/OperationButtonn";
-import "./css/App.css";
+import "./css/app.css";
 
 
 function App() {
@@ -51,7 +51,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Calculadora Grid</h1>
+      <h1>Calculadora</h1>
       <Display value={current} />
 
       <div className="calculator-grid">
