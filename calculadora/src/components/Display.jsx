@@ -1,7 +1,7 @@
-function Display({ resultado }) {
+function Display({ value }) {
   return (
-    <div className="resultado">
-      {resultado !== null && <h2>Resultado: {resultado}</h2>}
+    <div className="display">
+      {value || 0}
     </div>
   );
 }

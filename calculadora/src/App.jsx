@@ -1,65 +1,80 @@
-import Display from './components/Display';
-import NumberButton from './components/NumberButton';
-import Ope
-import { useState } from 'react'
-
-
+import { useState } from "react";
+import Display from "./components/Display";
+import NumberButton from "./components/NumberButton";
+import OperationButton from "./components/OperationButtonn";
+import "./css/App.css";
 
 
 function App() {
-  const [num1, setNum1] = useState("");
-  const [num2, setNum2] = useState("");
-  const [resultado, setResultado] = useState(null);
+  const [current, setCurrent] = useState("");
+  const [previous, setPrevious] = useState("");
+  const [operation, setOperation] = useState(null);
 
-  const calcular = (operacao) => {
-    const n1 = parseFloat(num1);
-    const n2 = parseFloat(num2);
+  const handleNumber = (num) => {
+    setCurrent(current + num);
+  };
 
-    if (isNaN(n1) || isNaN(n2)) {
-      alert("Digite números válidos!");
-      return;
+  const handleOperation = (op) => {
+    if (!current) return;
+    if (previous) calcular();
+    else {
+      setPrevious(current);
+      setCurrent("");
     }
+    setOperation(op);
+  };
+
+  const calcular = () => {
+    const n1 = parseFloat(previous);
+    const n2 = parseFloat(current);
+    if (isNaN(n1) || isNaN(n2)) return;
 
     let res;
-    switch (operacao) {
+    switch (operation) {
       case "+": res = n1 + n2; break;
       case "-": res = n1 - n2; break;
       case "*": res = n1 * n2; break;
-      case "/":
-        if (n2 === 0) {
-          alert("Não é possível dividir por zero!");
-          return;
-        }
-        res = n1 / n2;
-        break;
+      case "/": res = n2 === 0 ? "Erro" : n1 / n2; break;
       default: return;
     }
 
-    setResultado(res);
+    setCurrent(res.toString());
+    setPrevious("");
+    setOperation(null);
+  };
+
+  const handleClear = () => {
+    setCurrent("");
+    setPrevious("");
+    setOperation(null);
   };
 
   return (
     <div className="App">
-      <h1>Calculadora com Componentes</h1>
-      <input
-        type="number"
-        placeholder="Número 1"
-        value={num1}
-        onChange={(e) => setNum1(e.target.value)}
-      />
-      <input
-        type="number"
-        placeholder="Número 2"
-        value={num2}
-        onChange={(e) => setNum2(e.target.value)}
-      />
-      <div className="botoes">
-        <Button operacao="+" onClick={calcular} />
-        <Button operacao="-" onClick={calcular} />
-        <Button operacao="*" onClick={calcular} />
-        <Button operacao="/" onClick={calcular} />
+      <h1>Calculadora Grid</h1>
+      <Display value={current} />
+
+      <div className="calculator-grid">
+        <NumberButton number="7" onClick={handleNumber} />
+        <NumberButton number="8" onClick={handleNumber} />
+        <NumberButton number="9" onClick={handleNumber} />
+        <OperationButton operation="/" onClick={handleOperation} />
+
+        <NumberButton number="4" onClick={handleNumber} />
+        <NumberButton number="5" onClick={handleNumber} />
+        <NumberButton number="6" onClick={handleNumber} />
+        <OperationButton operation="*" onClick={handleOperation} />
+
+        <NumberButton number="1" onClick={handleNumber} />
+        <NumberButton number="2" onClick={handleNumber} />
+        <NumberButton number="3" onClick={handleNumber} />
+        <OperationButton operation="-" onClick={handleOperation} />
+
+        <NumberButton number="0" onClick={handleNumber} />
+        <button className="equals-button" onClick={calcular}>=</button>
+        <button className="clear-button" onClick={handleClear}>C</button>
+        <OperationButton operation="+" onClick={handleOperation} />
       </div>
-      <Display resultado={resultado} />
     </div>
   );
 }
