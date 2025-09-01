@@ -1,11 +1,11 @@
 import "../css/numberButton.css"
 
-function NumberButton({number,onclick}){
-    return (
-        <button className = "number-button" onClick={() => onclick(number)}>
-            {number}
-        </button>
-    )
+function NumberButton({ number, onClick }) {
+  return (
+    <button className="number-button" onClick={() => onClick(number)}>
+      {number}
+    </button>
+  );
 }
 
 export default NumberButton;

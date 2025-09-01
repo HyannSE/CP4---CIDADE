@@ -1,11 +1,11 @@
 import "../css/operationButton.css"
 
-function OperationButton({operation,onclick}){
-    return(
-        <button className="operation-button" onClick={() => onclick(operation)}>
-            {operation}
-        </button>
-    )
+function OperationButton({ operation, onClick }) {
+  return (
+    <button className="operation-button" onClick={() => onClick(operation)}>
+      {operation}
+    </button>
+  );
 }
 
 export default OperationButton;

@@ -11,7 +11,7 @@ function App() {
   const [operation, setOperation] = useState(null);
 
   const handleNumber = (num) => {
-    setCurrent(current + num);
+    setCurrent((prev) => prev + num);
   };
 
   const handleOperation = (op) => {
@@ -51,23 +51,17 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Calculadora</h1>
+      <h1>Calculadora Grid Funcional</h1>
       <Display value={current} />
 
       <div className="calculator-grid">
-        <NumberButton number="7" onClick={handleNumber} />
-        <NumberButton number="8" onClick={handleNumber} />
-        <NumberButton number="9" onClick={handleNumber} />
+        {["7","8","9"].map(n => <NumberButton key={n} number={n} onClick={handleNumber} />)}
         <OperationButton operation="/" onClick={handleOperation} />
 
-        <NumberButton number="4" onClick={handleNumber} />
-        <NumberButton number="5" onClick={handleNumber} />
-        <NumberButton number="6" onClick={handleNumber} />
+        {["4","5","6"].map(n => <NumberButton key={n} number={n} onClick={handleNumber} />)}
         <OperationButton operation="*" onClick={handleOperation} />
 
-        <NumberButton number="1" onClick={handleNumber} />
-        <NumberButton number="2" onClick={handleNumber} />
-        <NumberButton number="3" onClick={handleNumber} />
+        {["1","2","3"].map(n => <NumberButton key={n} number={n} onClick={handleNumber} />)}
         <OperationButton operation="-" onClick={handleOperation} />
 
         <NumberButton number="0" onClick={handleNumber} />
