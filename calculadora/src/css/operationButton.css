@@ -1,0 +1,14 @@
+.operation-button {
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  background: #2196f3;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.operation-button:hover {
+  background: #1976d2;
+}

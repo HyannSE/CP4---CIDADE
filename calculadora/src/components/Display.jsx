@@ -1,3 +1,5 @@
+import "../css/display.css";
+
 function Display({ value }) {
   return (
     <div className="display">

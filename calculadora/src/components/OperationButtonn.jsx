@@ -1,3 +1,5 @@
+import "../css/operationButton.css"
+
 function OperationButton({operation,onclick}){
     return(
         <button className="operation-button" onClick={() => onclick(operation)}>
