@@ -1,6 +1,8 @@
-import
+import Display from './components/Display';
+import NumberButton from './components/NumberButton';
+import Ope
 import { useState } from 'react'
-import Header from './components/Header'
+
 
 
 
