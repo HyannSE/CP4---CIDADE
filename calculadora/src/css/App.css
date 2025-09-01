@@ -11,6 +11,7 @@
   align-items: center;
   color: aliceblue;
   background: #121212; /* fundo preto da tela */
+  padding-top: 200px;
 }
 
 .App h1{
