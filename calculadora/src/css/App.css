@@ -2,47 +2,97 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .App {
-  text-align: center;
-  font-family: Arial, sans-serif;
-  margin-top: 30px;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  background: #121212; /* fundo preto da tela */
 }
 
+.App h1{
+    color: aliceblue;
+    text-align: center;
+}
+.square-container {
+  width: 400px;
+  height: 400px; /* quadrado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1c1c1c;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.calculator-container {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Grid de botões */
 .calculator-grid {
   display: grid;
-  grid-template-columns: repeat(4, 65px);
+  grid-template-columns: repeat(4, 70px);
+  grid-auto-rows: 70px;
   grid-gap: 10px;
   justify-content: center;
+  align-items: center;
 }
 
-.equals-button {
-  padding: 15px;
-  font-size: 18px;
-  border-radius: 8px;
+/* Botões gerais */
+button {
+  padding: 0;
+  font-size: 20px;
+  border-radius: 12px;
   border: none;
-  background: #4caf50;
-  color: white;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: transform 0.1s, background 0.2s;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* Botões especiais */
+.equals-button {
+  background: #ffc107; /* amarelo */
+  color: #1c1c1c;
 }
 
 .equals-button:hover {
-  background: #388e3c;
+  background: #ffb300;
 }
 
 .clear-button {
-  padding: 15px;
-  font-size: 18px;
-  border-radius: 8px;
-  border: none;
-  background: #f44336;
+  background: #f44336; /* vermelho */
   color: white;
-  cursor: pointer;
-  transition: background 0.2s;
 }
 
 .clear-button:hover {
   background: #d32f2f;
+}
+
+/* Operation Buttons */
+.operation-button {
+  background: #ffeb3b; /* amarelo suave */
+  color: #1c1c1c;
+}
+
+.operation-button:hover {
+  background: #fdd835;
+}
+
+/* Number Buttons */
+.number-button {
+  background: #333;
+  color: #ffc107; /* amarelo */
+}
+
+.number-button:hover {
+  background: #444;
 }
