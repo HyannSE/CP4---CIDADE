@@ -51,7 +51,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Calculadora Grid Funcional</h1>
+      <h1>Calculadora</h1>
       <Display value={current} />
 
       <div className="calculator-grid">
