@@ -1,33 +1,65 @@
+import
 import { useState } from 'react'
+import Header from './components/Header'
+
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [num1, setNum1] = useState("");
+  const [num2, setNum2] = useState("");
+  const [resultado, setResultado] = useState(null);
+
+  const calcular = (operacao) => {
+    const n1 = parseFloat(num1);
+    const n2 = parseFloat(num2);
+
+    if (isNaN(n1) || isNaN(n2)) {
+      alert("Digite números válidos!");
+      return;
+    }
+
+    let res;
+    switch (operacao) {
+      case "+": res = n1 + n2; break;
+      case "-": res = n1 - n2; break;
+      case "*": res = n1 * n2; break;
+      case "/":
+        if (n2 === 0) {
+          alert("Não é possível dividir por zero!");
+          return;
+        }
+        res = n1 / n2;
+        break;
+      default: return;
+    }
+
+    setResultado(res);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="App">
+      <h1>Calculadora com Componentes</h1>
+      <input
+        type="number"
+        placeholder="Número 1"
+        value={num1}
+        onChange={(e) => setNum1(e.target.value)}
+      />
+      <input
+        type="number"
+        placeholder="Número 2"
+        value={num2}
+        onChange={(e) => setNum2(e.target.value)}
+      />
+      <div className="botoes">
+        <Button operacao="+" onClick={calcular} />
+        <Button operacao="-" onClick={calcular} />
+        <Button operacao="*" onClick={calcular} />
+        <Button operacao="/" onClick={calcular} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <Display resultado={resultado} />
+    </div>
+  );
 }
 
-export default App
+export default App;
