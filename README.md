@@ -1,6 +1,4 @@
-# CP4 - CIDADE
-
-Projeto desenvolvido para a disciplina de [coloque aqui a disciplina] com foco em [breve descrição do objetivo do projeto — ex.: criar uma aplicação web que simula/representa funcionalidades relacionadas a cidades].
+Projeto desenvolvido para a disciplina de [Front End] com foco em [Usar as funções basicas de react — ex.: criar uma aplicação web que simula uma calculadora com 4 operações].
 
 ---
 
@@ -21,17 +19,14 @@ Acesse o projeto online através do link:
 ---
 
 ## 📋 Funcionalidades
-- [ ] Descreva aqui a funcionalidade principal do projeto  
-- [ ] Liste as demais funcionalidades importantes  
+- [Calculadora Basica] Calcula funções matematicas como soma, subtração, divisão e multiplicação 
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
-- [ ] Node.js  
-- [ ] Express  
-- [ ] React  
+## 🛠️ Tecnologias Utilizadas 
+- [ ] React/vite
 - [ ] Vercel (para deploy)  
-- [ ] Outras que vocês usaram no projeto  
+- [ ] javascript,css,html  
 
 ---
 
@@ -48,7 +43,7 @@ cd CP4---CIDADE
 npm install
 
 # Rodar o servidor local
-npm start
+npm run dev
 ```
 
 ---
