@@ -2,7 +2,7 @@ import { useState } from "react";
 import Display from "./components/Display";
 import NumberButton from "./components/NumberButton";
 import OperationButton from "./components/OperationButtonn";
-import "./css/app.css";
+import "./css/App.css";
 
 
 function App() {
