@@ -1,12 +1,53 @@
-# React + Vite
+Projeto desenvolvido para a disciplina de [FrontEnd] com foco em [Aprendizado sobre react — ex.: criar uma aplicação web que simula uma calculadora].
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🚀 Deploy
+Acesse o projeto online através do link:  
+👉 [Deploy no Vercel](https://cp-4-cidade.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 👨‍💻 Integrantes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Arthur Serrano Veloso** – RM: 561542  
+- **Hyann dos Santos Espindas** – RM: 563421  
+- **José Rafael Tejeda Mantilla** – RM: 561849  
+- **Theodoro Sievers** – RM: 562036  
+- **Walter Henrique Pereira de Toledo** – RM: 562476  
+
+---
+
+## 📋 Funcionalidades
+- [ ] Calculadora com 4 operações básicas como soma,subtração,multiplicação e divisão
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+- [ ] Git/Github
+- [ ] React/Vite
+- [ ] Vercel (para deploy)  
+- [ ] JavaScript/Css/Html  
+
+---
+
+## 📦 Como rodar o projeto localmente
+
+```bash
+# Clonar o repositório
+git clone https://github.com/HyannSE/CP4---CIDADE.git
+
+# Entrar na pasta do projeto
+cd CP4---CIDADE
+
+# Instalar as dependências
+npm install
+
+# Rodar o servidor local
+npm run dev
+```
+
+---
+
+## 📄 Licença
+Este projeto foi desenvolvido para fins acadêmicos.  
